@@ -6,6 +6,7 @@ export const API_COMPLETE = 'API_COMPLETE';
 export const API_LOADING = 'API_LOADING';
 export const API_FINISHED = 'API_FINISHED';
 
+// Api actions
 export const apiRequest = ({
   body, method, url, context,
 }) => ({

@@ -13,6 +13,8 @@ export const Loader = ({ isLoading }) => (
     ) : ''
 );
 
+// I created this HOC with the idea of wrapping any component that needs to be aware of the API busy state.
+// This way the wrapped component does not need to know how to get the api busy information, keeping it more clean.
 export const withLoader = (WrappedComponent) => {
   const WithLoaderWrapper = (props) => {
     const { api } = props;

@@ -6,6 +6,14 @@ import {
   GetSearchMoviesUrl, GetTrendingMoviesUrl, GetTopRatedMoviesUrl, GetMovieUrl,
 } from '../../libs/moviedb/api';
 
+/**
+ * The idea of this architecture is to create dumb actions / reducers, the middleware is responsible
+ * for transforming actions and sometimes even deciding wether to call action 'a' or action 'b'
+ *
+ * As you can see here, the movies middleware is responsible for catching all movie related actions and dispatching
+ * the needed actions for that particular task.
+ */
+
 const moviesMiddleware = ({ dispatch, getState }) => next => (action) => {
   next(action);
   let url = '';

@@ -10,16 +10,19 @@ import Nav from './ui/nav';
 import MovieSearch from './ui/movie/search';
 import MovieDetail from './ui/movie/detail';
 
+// default route
 const Default = () => (
   <Redirect to="/movies/trending" />
 );
 
+// The navbar is printed on all routes
 const NavBar = () => (
   <Nav>
     <MovieSearch />
   </Nav>
 );
 
+// I decided to go for the HashRouter for the sake of simplicity.
 const App = () => (
   <Provider store={store}>
     <HashRouter>

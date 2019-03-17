@@ -19,10 +19,12 @@ class MovieDetail extends Component {
   }
 
   componentDidMount() {
+    // Calling route changed in case of a refresh or direct url access
     this.routeChanged();
   }
 
   componentDidUpdate({ location: oldLocation }) {
+    // Check for route change
     const { location: currentLocation } = this.props;
     if (currentLocation !== oldLocation) {
       this.routeChanged();
@@ -39,6 +41,7 @@ class MovieDetail extends Component {
   }
 
   goBack() {
+    // This can use some refactoring, we need to check if there is something to goBack().
     const { history } = this.props;
     history.goBack();
   }

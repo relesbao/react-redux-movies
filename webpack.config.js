@@ -3,16 +3,15 @@ const path = require('path');
 module.exports = {
   devtool: 'source-map',
   entry: './src/app.js',
+  mode: 'development',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
-    devtoolLineToLine: true,
-    sourceMapFilename: './bundle.js.map',
   },
   devServer: {
     historyApiFallback: true,
     contentBase: './public',
-    compress: true,
+    compress: false,
     port: 8080,
   },
   module: {

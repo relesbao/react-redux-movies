@@ -1,5 +1,6 @@
 import { SET_MOVIES, NORMALIZED_MOVIES, SET_MOVIE } from '../actions/movies';
 
+// With this middleware architecture, reducers can be very clean.
 const moviesReducer = (movies = [], action) => {
   switch (action.type) {
     case SET_MOVIES:

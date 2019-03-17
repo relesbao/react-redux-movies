@@ -6,10 +6,12 @@ import { withLoader } from '../loader';
 
 class MovieList extends Component {
   componentDidMount() {
+    // Calling route changed in case of a refresh or direct url access
     this.routeChanged();
   }
 
   componentDidUpdate({ location: oldLocation }) {
+    // Check if the location has changed in order to call routeChanged()
     const { location: currentLocation } = this.props;
     if (currentLocation !== oldLocation) {
       this.routeChanged();
@@ -17,6 +19,9 @@ class MovieList extends Component {
   }
 
   routeChanged() {
+    // All movie lists are rendered here, so i decided to handle all list paths here aswell
+    // Another approach would be create a container component for each route that just renders the movie
+    // list passing the correct list type as a prop.
     const {
       match, trendingMovies, topRatedMovies, searchMovies,
     } = this.props;
