@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+    "default-case":"off",
+    "no-case-declarations": "off",
+    "max-len":"off"
+  },
+  "globals": {
+    "fetch": true,
+    "window": true
+  }
+}
