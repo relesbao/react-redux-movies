@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "React redux movies api.",
   "scripts": {
-    "dev": "webpack -p && webpack-dev-server --hot --progress --colors --debug"
+    "dev": "webpack -p && webpack-dev-server --hot --progress --colors --debug",
+    "prepare": "webpack --mode=production",
+    "deployToSurge": "webpack --mode=production && (cd public/ && surge)"
   },
   "keywords": [
     "react",
