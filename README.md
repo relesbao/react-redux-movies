@@ -29,6 +29,7 @@ The application uses [The Movie Database API](https://developers.themoviedb.org/
 
 ## Roadmap
 
+- Testing
 - Filter by genres
 - Move the API to a backend
 - Social login
